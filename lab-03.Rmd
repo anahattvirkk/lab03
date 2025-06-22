@@ -61,7 +61,14 @@ There are `r sum(nobel_living_science$born_country_us == "USA")` Nobel laureates
 
 ### Exercise 5
 
-...
+```{r US-born}
+ggplot(nobel_living_science, aes(y = country_us, fill = born_country_us)) +
+  geom_bar(position = "stack") + 
+  facet_wrap(~category) + 
+  labs(title = "Nobel Prize Laureates by Category and Country", x = "Laureate Count", y ="Country", fill = "Birth Country")
+```
+
+Based on these graphs, the data supports Buzzfeed's claim that many US laureates were born in other countries.
 
 ### Exercise 6
 

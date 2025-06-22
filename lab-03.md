@@ -77,7 +77,17 @@ There are 105 Nobel laureates born in the US.
 
 ### Exercise 5
 
-…
+``` r
+ggplot(nobel_living_science, aes(y = country_us, fill = born_country_us)) +
+  geom_bar(position = "stack") + 
+  facet_wrap(~category) + 
+  labs(title = "Nobel Prize Laureates by Category and Country", x = "Laureate Count", y ="Country", fill = "Birth Country")
+```
+
+![](lab-03_files/figure-gfm/US-born-1.png)<!-- -->
+
+Based on these graphs, the data supports Buzzfeed’s claim that many US
+laureates were born in other countries.
 
 ### Exercise 6
 
