@@ -1,7 +1,7 @@
 Lab 03 - Nobel laureates
 ================
-Insert your name here
-Insert date here
+Anahatt VIrk
+06/21/2025
 
 ### Load packages and data
 
