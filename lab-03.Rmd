@@ -72,4 +72,11 @@ Based on these graphs, the data supports Buzzfeed's claim that many US laureates
 
 ### Exercise 6
 
-...
+```{r most-common-country}
+nobel_living_science %>%
+  filter(country == "USA", born_country_us == "Other") %>%
+  count(born_country) %>%
+  arrange(desc(n))
+```
+
+From the data above, the country that is most common is Germany.
