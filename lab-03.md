@@ -47,9 +47,24 @@ This data frame contains 228 observations.
 
 ### Exercise 3
 
-Remove this text, and add your answer for Exercise 1 here. Add code
-chunks as needed. Don’t forget to label your code chunk. Do not use
-spaces in code chunk labels.
+``` r
+nobel_living <- nobel_living %>%
+  mutate(country_us = if_else(country == "USA", "USA", "Other"))
+
+nobel_living_science <- nobel_living %>%
+  filter(category %in% c("Physics", "Medicine", "Chemistry", "Economics"))
+
+ggplot(nobel_living_science, aes(y = country_us)) +
+  geom_bar() + 
+  facet_wrap(~category) + 
+  labs(title = "Nobel Prize Laureates by Category and Country", x = "Laureate Count", y ="Country")
+```
+
+![](lab-03_files/figure-gfm/USA-1.png)<!-- -->
+
+From the graphs above, it can be seen that Buzzfeed’s headline is
+supported by the data as the US has the most amount of laureates for
+each scientific category.
 
 ### Exercise 4
 
