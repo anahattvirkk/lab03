@@ -1,6 +1,6 @@
 ---
 title: "Lab 03 - Nobel laureates"
-author: "Anahatt VIrk"
+author: "Anahatt Virk"
 date: "06/21/2025"
 output: github_document
 ---
@@ -18,11 +18,11 @@ nobel <- read_csv("data/nobel.csv")
 ## Exercises
 
 ### Exercise 1
+```{r nobel-info}
+nobel <- read_csv("data/nobel.csv")
+```
 
-Remove this text, and add your answer for Exercise 1 here.
-Add code chunks as needed.
-Don't forget to label your code chunk.
-Do not use spaces in code chunk labels.
+The dataset contains `r nrow(nobel)` observations and `r ncol(nobel)` variables. Each row contains the information for a Nobel Prize awarded to one laureate. Details such as the recipient's name, gender, and year recieved are present in each row. 
 
 ### Exercise 2
 
