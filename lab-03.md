@@ -60,7 +60,7 @@ ggplot(nobel_living_science, aes(y = country_us)) +
   labs(title = "Nobel Prize Laureates by Category and Country", x = "Laureate Count", y ="Country")
 ```
 
-![](lab-03_files/figure-gfm/USA-1.png)<!-- -->
+![](lab-03_files/figure-gfm/USA-laureates-1.png)<!-- -->
 
 From the graphs above, it can be seen that Buzzfeed’s headline is
 supported by the data as the US has the most amount of laureates for
@@ -68,7 +68,12 @@ each scientific category.
 
 ### Exercise 4
 
-…
+``` r
+nobel_living_science <- nobel_living_science %>%
+  mutate(born_country_us = if_else(born_country == "USA", "USA", "Other"))
+```
+
+There are 105 Nobel laureates born in the US.
 
 ### Exercise 5
 

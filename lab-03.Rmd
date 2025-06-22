@@ -35,7 +35,7 @@ This data frame contains `r nrow(nobel_living)` observations.
 
 ### Exercise 3
 
-```{r USA}
+```{r USA-laureates}
 nobel_living <- nobel_living %>%
   mutate(country_us = if_else(country == "USA", "USA", "Other"))
 
@@ -52,7 +52,12 @@ From the graphs above, it can be seen that Buzzfeed's headline is supported by t
 
 ### Exercise 4
 
-...
+```{r birth-country}
+nobel_living_science <- nobel_living_science %>%
+  mutate(born_country_us = if_else(born_country == "USA", "USA", "Other"))
+```
+
+There are `r sum(nobel_living_science$born_country_us == "USA")` Nobel laureates born in the US.
 
 ### Exercise 5
 
